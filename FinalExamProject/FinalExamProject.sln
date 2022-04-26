@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32414.318
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinalExamProject", "FinalExamProject\FinalExamProject.csproj", "{459C9669-943C-4912-9E2B-3A579EE390B6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinalExamProjectApp", "FinalExamProject\FinalExamProjectApp.csproj", "{459C9669-943C-4912-9E2B-3A579EE390B6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogicEngine", "LogicEngine\LogicEngine.csproj", "{676CB746-1616-409A-B2FC-8BA790505B85}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{459C9669-943C-4912-9E2B-3A579EE390B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{459C9669-943C-4912-9E2B-3A579EE390B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{459C9669-943C-4912-9E2B-3A579EE390B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{676CB746-1616-409A-B2FC-8BA790505B85}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{676CB746-1616-409A-B2FC-8BA790505B85}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{676CB746-1616-409A-B2FC-8BA790505B85}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{676CB746-1616-409A-B2FC-8BA790505B85}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,0 +1,14 @@
+@startuml "Final Exam Project"
+
+package "GUI Layer" {
+    class Form
+}
+
+package "Logic Layer" {
+    class Basket 
+    abstract class Food 
+    class Veggie extends Food
+    class Fruit extends Food
+
+
+@enduml
