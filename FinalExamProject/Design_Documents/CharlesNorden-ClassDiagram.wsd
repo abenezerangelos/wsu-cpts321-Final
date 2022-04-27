@@ -11,13 +11,14 @@ package "GUI Layer" {
 
 package "Logic Layer" {
     class BasketManager {
-        +TrashBin
         {static} +createItem()
-        {static} +addItem()
         {static} +changeItem()
+        {static} +createBasket()
+        {static} +addItemToBasket()
+        {static} +removeItemFromBasket()
         {static} +deleteItem()
-        {static} +getBasket()
         {static} +deleteBasket()
+        {static} +undo()
     }
 
     abstract class Item << prototype >> {
