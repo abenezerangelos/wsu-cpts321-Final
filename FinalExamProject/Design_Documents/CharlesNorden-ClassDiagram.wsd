@@ -1,20 +1,25 @@
 @startuml "Final Exam Project"
 
 package "GUI Layer" {
-    Form -- AppEngine
-}
+    class EngineController {
+        -Items: List<Item>
+        -Baskets: List<Basket>
+    }
 
-class AppEngine {
-    -Items: List<Item>
-    -Baskets: List<Basket>
+    WinForms -- EngineController
 }
 
 package "Logic Layer" {
-
-    abstract class Basket {
-        -Items: List<Item>
+    class BasketManager {
+        +TrashBin
+        {static} +createItem()
+        {static} +addItem()
+        {static} +changeItem()
+        {static} +deleteItem()
+        {static} +getBasket()
+        {static} +deleteBasket()
     }
-
+    
     abstract class Item << prototype >> {
         -Name: String
         -Color: String
@@ -32,6 +37,12 @@ package "Logic Layer" {
         -Type: String
     }
 
+
+    package Factory {
+    abstract class Basket {
+        -Items: List<Item>
+    }
+
     class BasketFactory {
         +createBasket()
     }
@@ -40,23 +51,15 @@ package "Logic Layer" {
         +createItem()
     }
 
-    class BasketManager {
-        +TrashBin
-        {static} +createItem()
-        {static} +addItem()
-        {static} +changeItem()
-        {static} +deleteItem()
-        {static} +getBasket()
-        {static} +deleteBasket()
-    }
-    
     BasketFactory ..> Basket
     FoodFactory ..> Item
 
-    AppEngine -- BasketManager
-    AppEngine -- BasketFactory
-    AppEngine -- FoodFactory
+    EngineController -- BasketManager
+    EngineController -- BasketFactory
+    EngineController -- FoodFactory
 
     Basket --> "0..N" Item
+    }
+}
 
 @enduml
