@@ -1,0 +1,62 @@
+@startuml "Final Exam Project"
+
+package "GUI Layer" {
+    Form -- AppEngine
+}
+
+class AppEngine {
+    -Items: List<Item>
+    -Baskets: List<Basket>
+}
+
+package "Logic Layer" {
+
+    abstract class Basket {
+        -Items: List<Item>
+    }
+
+    abstract class Item << prototype >> {
+        -Name: String
+        -Color: String
+        -Shape: String
+        -Texture: String
+        -Size: enum 
+        -Taste: enum
+    }
+
+    class Veggie extends Item {
+        -Type: String
+    }
+
+    class Fruit extends Item {
+        -Type: String
+    }
+
+    class BasketFactory {
+        +createBasket()
+    }
+    
+    class FoodFactory {
+        +createItem()
+    }
+
+    class BasketManager {
+        +TrashBin
+        {static} +createItem()
+        {static} +addItem()
+        {static} +changeItem()
+        {static} +deleteItem()
+        {static} +getBasket()
+        {static} +deleteBasket()
+    }
+    
+    BasketFactory ..> Basket
+    FoodFactory ..> Item
+
+    AppEngine -- BasketManager
+    AppEngine -- BasketFactory
+    AppEngine -- FoodFactory
+
+    Basket --> "0..N" Item
+
+@enduml
