@@ -19,13 +19,13 @@ package "Logic Layer" {
         {static} +getBasket()
         {static} +deleteBasket()
     }
-    
+
     abstract class Item << prototype >> {
         -Name: String
         -Color: String
         -Shape: String
         -Texture: String
-        -Size: enum 
+        -Size: enum
         -Taste: enum
     }
 
@@ -37,28 +37,27 @@ package "Logic Layer" {
         -Type: String
     }
 
-
-    package Factory {
     abstract class Basket {
         -Items: List<Item>
     }
 
-    class BasketFactory {
-        +createBasket()
-    }
-    
-    class FoodFactory {
-        +createItem()
-    }
+    package Factory {
+        class BasketFactory {
+            +createBasket()
+        }
 
-    BasketFactory ..> Basket
-    FoodFactory ..> Item
+        class FoodFactory {
+            +createItem()
+        }
 
-    EngineController -- BasketManager
-    EngineController -- BasketFactory
-    EngineController -- FoodFactory
+        BasketFactory ..> Basket
+        FoodFactory ..> Item
 
-    Basket --> "0..N" Item
+        EngineController -- BasketManager
+        EngineController -- BasketFactory
+        EngineController -- FoodFactory
+
+        Basket --> "0..N" Item
     }
 }
 
