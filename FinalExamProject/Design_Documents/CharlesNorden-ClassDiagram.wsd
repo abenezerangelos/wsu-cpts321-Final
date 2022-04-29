@@ -1,6 +1,6 @@
 @startuml "Final Exam Project"
 
-package "GUI Layer" {
+package "GUIApp" {
     class EngineController {
         -Items: List<Item>
         -Baskets: List<Basket>
@@ -9,7 +9,7 @@ package "GUI Layer" {
     WinForms -- EngineController
 }
 
-package "Logic Layer" {
+package "LogicEngine" {
     class BasketManager {
         {static} +createItem()
         {static} +changeItem()
@@ -21,25 +21,79 @@ package "Logic Layer" {
         {static} +undo()
     }
 
-    abstract class Item << prototype >> {
-        -Name: String
-        -Color: String
-        -Shape: String
-        -Texture: String
-        -Size: enum
-        -Taste: enum
+    package "AbstractBaseClass" {
+        abstract class Item << prototype >> {
+            -color: ItemColor
+            -shape: ItemShape
+            -texture: ItemTexture
+            -size: ItemSize
+            +Name: String
+            +Color: String
+            +Shape: String
+            +Texture: String
+            +Size: String
+        }
+
+        note top of Item
+            The member attributes are of enum types,
+            which are converted to String upon query.
+        end note
+
+        abstract class Food extends Item {
+            -taste: ItemTaste
+            +Taste: String
+        }
+    }
+    
+    package "ItemAttributes" {
+        enum ItemColor {
+            BLUE
+            GREEN
+            YELLOW
+            ORANGE
+            RED
+        }
+
+        enum ItemShape {
+            SQUARE
+            CIRCLE
+            OVAL
+        }
+        
+        enum ItemTexture {
+            FIRM
+            SOFT
+            CRUNCHY
+            CHEWY
+        }
+        
+        enum ItemSize {
+            TINY
+            SMALL
+            MEDIUM
+            LARGE
+            YUGE
+        }
+        
+        enum ItemTaste {
+            SWEET
+            SOUR
+            BITTER
+        }
     }
 
-    class Veggie extends Item {
-        -Type: String
-    }
+    package "RunTimeClass" {
+        class Veggie extends Food {
+            -Type: String
+        }
 
-    class Fruit extends Item {
-        -Type: String
-    }
+        class Fruit extends Food{
+            -Type: String
+        }
 
-    abstract class Basket {
-        -Items: List<Item>
+        abstract class Basket {
+            -Items: List<Item>
+        }
     }
 
     package Factory {
