@@ -22,7 +22,15 @@ namespace LogicEngine
         /// The content of the basket.
         /// </summary>
         [System.Diagnostics.CodeAnalysis.SuppressMessage("StyleCop.CSharp.MaintainabilityRules", "SA1401:Fields should be private", Justification = "Basket content should be visible.")]
-        public List<T> Contents;
+        public List<T>? Contents;
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Basket{T}"/> class.
+        /// </summary>
+        public Basket()
+        {
+            this.Contents = null;
+        }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="Basket{T}"/> class.
@@ -32,6 +40,19 @@ namespace LogicEngine
         {
             this.Contents = new List<T>();
             this.Contents.Add(item);
+        }
+
+        /// <summary>
+        /// Add the new item into the Basket.
+        /// </summary> /// <param name="item">the item to be added.</param>
+        public void Add(T item)
+        {
+            if (this.Contents == null)
+            {
+                this.Contents = new List<T>();
+            }
+
+            this.Contents.Add((T)item);
         }
     }
 }
