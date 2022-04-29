@@ -1,4 +1,4 @@
-﻿// <copyright file="FoodItem.cs" company="Charles Norden -- 011606177">
+﻿// <copyright file="Veggie.cs" company="Charles Norden -- 011606177">
 // Copyright (c) Charles Norden -- 011606177. All rights reserved.
 // </copyright>
 
