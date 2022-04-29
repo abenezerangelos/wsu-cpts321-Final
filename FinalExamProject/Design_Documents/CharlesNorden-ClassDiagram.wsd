@@ -20,11 +20,6 @@ package "LogicEngine" {
         {static} +deleteBasket()
         {static} +undo()
     }
-    
-    note bottom of BasketManager
-        This controller manages the baskets and
-        the items inside the baskets.
-    end note
 
     package "AbstractBaseClass" {
         abstract class Item << prototype >> {
@@ -39,17 +34,12 @@ package "LogicEngine" {
             +Size: String
         }
 
-        note top of Item
-            The member attributes are of enum types,
-            which are converted to String upon query.
-        end note
-
         abstract class Food extends Item {
             -taste: ItemTaste
             +Taste: String
         }
     }
-    
+
     package "ItemAttributes" {
         enum ItemColor {
             BLUE
@@ -64,14 +54,14 @@ package "LogicEngine" {
             CIRCLE
             OVAL
         }
-        
+
         enum ItemTexture {
             FIRM
             SOFT
             CRUNCHY
             CHEWY
         }
-        
+
         enum ItemSize {
             TINY
             SMALL
@@ -79,7 +69,7 @@ package "LogicEngine" {
             LARGE
             YUGE
         }
-        
+
         enum ItemTaste {
             SWEET
             SOUR
@@ -98,7 +88,6 @@ package "LogicEngine" {
             -Items: List<Item>
         }
     }
-
     package Factory {
         class BasketFactory {
             +createBasket()
@@ -115,8 +104,22 @@ package "LogicEngine" {
         EngineController -- BasketFactory
         EngineController -- FoodFactory
 
-        Basket --> "0..N" Item
+        Basket --> "0..N" Item : contains
     }
+
+    note bottom of BasketManager
+        This controller manages the baskets and
+        the items inside the baskets.
+    end note
+
+    note top of Item
+        The member attributes are of enum types,
+        which are converted to String upon query.
+    end note
+
+    note bottom of Basket
+        A basket may contain multiple items.
+    end note
 }
 
 @enduml
