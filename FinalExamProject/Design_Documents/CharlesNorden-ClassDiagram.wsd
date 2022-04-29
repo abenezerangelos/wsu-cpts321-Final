@@ -1,4 +1,4 @@
-@startuml "FinalExamAppProject"
+@startuml "CharlesNorden-ClassDiagram"
 
 package "GUIApp" {
     class EngineController {
@@ -20,6 +20,11 @@ package "LogicEngine" {
         {static} +deleteBasket()
         {static} +undo()
     }
+    
+    note bottom of BasketManager
+        This controller manages the baskets and
+        the items inside the baskets.
+    end note
 
     package "AbstractBaseClass" {
         abstract class Item << prototype >> {
