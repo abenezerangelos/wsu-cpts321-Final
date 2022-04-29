@@ -1,6 +1,7 @@
 using NUnit.Framework;
 using LogicEngine.RunTimeClass;
 using LogicEngine.RunTimeClass.FoodItem;
+using LogicEngine.ItemAttributes;
 
 namespace LogicEngineTests
 {
@@ -41,6 +42,16 @@ namespace LogicEngineTests
             var veggie = new Fruit();
 
             Assert.That(veggie, Is.InstanceOf<Fruit>());
+        }
+
+        [Test]
+        public void Test_VeggieAttributes()
+        {
+            var veggie = new Veggie();
+
+            veggie.Color = ItemColor.GREEN.ToString();
+
+            Assert.That(veggie.Color, Is.EqualTo(ItemColor.GREEN.ToString()));
         }
     }
 }
