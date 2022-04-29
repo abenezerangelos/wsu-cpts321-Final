@@ -2,7 +2,7 @@
 
 package "GUIApp" {
     class EngineController {
-        -FreeItems: Basket
+        -FreeItems: List<Item> 
         -Baskets: List<Basket>
     }
 
@@ -84,10 +84,16 @@ package "LogicEngine" {
         class Fruit extends Food{
         }
 
-        abstract class Basket {
-            -Items: List<Item>
+        class Basket << generic >> {
+            -contents: List<T>
         }
+
+        note right of Basket::contents
+            The contents of the basket are stored in a list,
+            and they are must be homogeneous.
+        end note
     }
+
     package Factory {
         class BasketFactory {
             +createBasket()
@@ -119,7 +125,11 @@ package "LogicEngine" {
 
     note bottom of Basket
         A basket may contain multiple items.
+        However, the items **must** be of the same type.
+        For example, a basket may contain only fruits,
+        or only vegetables, but not both.
     end note
+
 }
 
 @enduml
