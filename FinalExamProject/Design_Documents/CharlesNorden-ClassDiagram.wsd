@@ -1,4 +1,4 @@
-@startuml "Final Exam Project"
+@startuml "FinalExamAppProject"
 
 package "GUIApp" {
     class EngineController {
