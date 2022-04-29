@@ -2,7 +2,7 @@
 
 package "GUIApp" {
     class EngineController {
-        -Items: List<Item>
+        -FreeItems: Basket
         -Baskets: List<Basket>
     }
 
