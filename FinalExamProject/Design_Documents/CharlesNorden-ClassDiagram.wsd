@@ -84,11 +84,9 @@ package "LogicEngine" {
 
     package "RunTimeClass" {
         class Veggie extends Food {
-            -Type: String
         }
 
         class Fruit extends Food{
-            -Type: String
         }
 
         abstract class Basket {

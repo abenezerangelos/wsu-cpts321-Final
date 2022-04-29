@@ -23,8 +23,16 @@ namespace LogicEngine.AbstractBaseClass
         /// Initializes a new instance of the <see cref="Food"/> class.
         /// </summary>
         public Food()
-            : base()
         {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Food"/> class.
+        /// </summary>
+        /// <param name="name">the name of the food item.</param>
+        public Food(string name)
+        {
+            this.Name = name;
         }
 
         /// <summary>
