@@ -89,8 +89,8 @@ package "LogicEngine" {
         }
 
         note right of Basket::contents
-            The contents of the basket are stored in a list,
-            and they are must be homogeneous.
+            The contents of the basket are stored in a list.
+            Elements of the list are homogeneous.
         end note
     }
 

@@ -29,7 +29,7 @@ namespace LogicEngineTests
 
             basket.Add(new Fruit());
 
-            Assert.That(basket.Contents.Count, Is.GreaterThan(0));
+            Assert.That(basket.Count, Is.GreaterThan(0));
         }
 
         [Test]
@@ -39,7 +39,7 @@ namespace LogicEngineTests
 
             basket.Add(new Fruit());
 
-            Assert.That(basket.Contents[0], Is.InstanceOf<Fruit>());
+            Assert.That(basket[0], Is.InstanceOf<Fruit>());
         }
     }
 }
