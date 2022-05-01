@@ -15,12 +15,14 @@ namespace LogicEngine.AbstractBaseClass
         private ItemShape shape;
         private ItemTexture texture;
         private ItemSize size;
+        private ItemState state;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="Item"/> class.
         /// </summary>
         public Item()
         {
+            this.state = ItemState.ALIVE;
         }
 
         /// <summary>
@@ -62,6 +64,15 @@ namespace LogicEngine.AbstractBaseClass
         {
             get => ((ItemSize)this.size).ToString();
             set => this.size = (ItemSize)Enum.Parse(typeof(ItemSize), value, true);
+        }
+
+        /// <summary>
+        /// Gets or sets the existenial state of the Item.
+        /// </summary>
+        public string State
+        {
+            get => ((ItemState)this.state).ToString();
+            set => this.state = (ItemState)Enum.Parse(typeof(ItemState), value, true);
         }
     }
 }
