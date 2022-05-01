@@ -1,6 +1,6 @@
 ﻿using NUnit.Framework;
 using LogicEngine.RunTimeClass;
-using LogicEngine.RunTimeClass.FoodItem;
+using LogicEngine.RunTimeClass.FoodItems;
 using LogicEngine;
 
 namespace LogicEngineTests

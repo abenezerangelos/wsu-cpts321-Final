@@ -1,7 +1,7 @@
 using NUnit.Framework;
-using LogicEngine.RunTimeClass;
-using LogicEngine.RunTimeClass.FoodItem;
+using LogicEngine.RunTimeClass.FoodItems;
 using LogicEngine.ItemAttributes;
+using LogicEngine.Factories;
 
 namespace LogicEngineTests
 {
@@ -52,6 +52,14 @@ namespace LogicEngineTests
             veggie.Color = ItemColor.GREEN.ToString();
 
             Assert.That(veggie.Color, Is.EqualTo(ItemColor.GREEN.ToString()));
+        }
+
+        [Test]
+        public void Test_VeggieFactory1()
+        {
+            var veggie = ItemFactory.CreateItem("Veggie");
+
+            Assert.That(veggie, Is.InstanceOf<Veggie>());
         }
     }
 }

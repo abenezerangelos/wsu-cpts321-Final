@@ -1,8 +1,8 @@
-﻿// <copyright file="Veggie.cs" company="Charles Norden -- 011606177">
+﻿// <copyright file="Fruit.cs" company="Charles Norden -- 011606177">
 // Copyright (c) Charles Norden -- 011606177. All rights reserved.
 // </copyright>
 
-namespace LogicEngine.RunTimeClass.FoodItem
+namespace LogicEngine.RunTimeClass.FoodItems
 {
     using System;
     using System.Collections.Generic;
@@ -12,22 +12,22 @@ namespace LogicEngine.RunTimeClass.FoodItem
     using LogicEngine.AbstractBaseClass;
 
     /// <summary>
-    /// The class for Veggie item.
+    /// The class for Fruit item.
     /// </summary>
-    internal class Veggie : Food
+    internal class Fruit : Food
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="Veggie"/> class.
+        /// Initializes a new instance of the <see cref="Fruit"/> class.
         /// </summary>
-        public Veggie()
+        public Fruit()
         {
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="Veggie"/> class.
+        /// Initializes a new instance of the <see cref="Fruit"/> class.
         /// </summary>
-        /// <param name="name">the name of the veggie.</param>
-        public Veggie(string name)
+        /// <param name="name">the name of the fruit.</param>
+        public Fruit(string name)
         {
             this.Name = name;
         }
