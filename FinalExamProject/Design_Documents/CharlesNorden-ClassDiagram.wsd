@@ -1,16 +1,13 @@
 @startuml "CharlesNorden-ClassDiagram"
 
 package "GUIApp" {
-    class EngineController {
-        -FreeItems: List<Item> 
-        -Baskets: List<Basket>
-    }
-
     WinForms -- EngineController
 }
 
 package "LogicEngine" {
-    class BasketManager {
+    class EngineController {
+        -ItemContainers: List<Food> 
+        -BasketContainer: List<Basket>
         {static} +createItem()
         {static} +changeItem()
         {static} +createBasket()
