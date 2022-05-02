@@ -7,9 +7,11 @@ namespace LogicEngine
     using System;
     using System.Collections;
     using System.Collections.Generic;
+    using System.ComponentModel;
     using System.Linq;
     using System.Text;
     using System.Threading.Tasks;
+    using LogicEngine.AbstractBaseClass;
     using LogicEngine.Factories;
     using LogicEngine.RunTimeClass;
     using LogicEngine.RunTimeClass.FoodItems;
@@ -17,7 +19,7 @@ namespace LogicEngine
     /// <summary>
     /// The manger for baskets and items.
     /// </summary>
-    internal class EngineController
+    internal class EngineController : INotifyPropertyChanged
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="EngineController"/> class.
@@ -27,6 +29,9 @@ namespace LogicEngine
             this.ItemContainer = new ArrayList();
             this.BasketContainer = new ArrayList();
         }
+
+        /// <inheritdoc/>
+        public event PropertyChangedEventHandler? PropertyChanged = (sender, e) => { };
 
         /// <summary>
         /// Gets or sets the free items created by the users.
@@ -52,7 +57,9 @@ namespace LogicEngine
         /// <param name="typeName">the type of the food item.</param>
         internal void CreateFoodItem(string typeName)
         {
-            this.ItemContainer.Add(ItemFactory.CreateItem(typeName));
+            var newItem = ItemFactory.CreateItem(typeName);
+            this.ItemContainer.Add(newItem);
+            this.PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(typeName));
         }
 
         /// <summary>

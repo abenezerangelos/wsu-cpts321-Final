@@ -55,7 +55,7 @@ namespace LogicEngineTests
         }
 
         [Test]
-        public void Test_VeggieFactory1()
+        public void Test_VeggieFactory()
         {
             var veggie = ItemFactory.CreateItem("Veggie");
 

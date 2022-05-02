@@ -27,7 +27,7 @@ namespace LogicEngineTests
         }
 
         [Test]
-        public void Test_CreateNewBasket_1()
+        public void Test_CreateNewBasket_Veggie()
         {
             var appInstance = new EngineController();
 
@@ -37,7 +37,7 @@ namespace LogicEngineTests
         }
 
         [Test]
-        public void Test_CreateNewBasket_2()
+        public void Test_CreateNewBasket_Fruit()
         {
             var appInstance = new EngineController();
 
@@ -47,7 +47,7 @@ namespace LogicEngineTests
         }
 
         [Test]
-        public void Test_AddNewBasket_1()
+        public void Test_AddNewBasket_Veggie()
         {
             var appInstance = new EngineController();
 
@@ -57,7 +57,7 @@ namespace LogicEngineTests
         }
 
         [Test]
-        public void Test_AddNewBasket_2()
+        public void Test_AddNewBasket_VeggieFruit()
         {
             var appInstance = new EngineController();
 
@@ -68,7 +68,7 @@ namespace LogicEngineTests
         }
 
         [Test]
-        public void Test_RemoveItemFromBasket_1()
+        public void Test_RemoveItemFromBasket()
         {
             var appInstance = new EngineController();
 
