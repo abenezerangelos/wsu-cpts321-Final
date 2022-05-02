@@ -28,80 +28,73 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("Item1");
-            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem("Item2");
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.listView2 = new System.Windows.Forms.ListView();
-            this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.tabControl1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // groupBox1
+            // tabControl1
             // 
-            this.groupBox1.Controls.Add(this.listView2);
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(591, 748);
-            this.groupBox1.TabIndex = 2;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "groupBox1";
+            this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tabPage3);
+            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControl1.Location = new System.Drawing.Point(0, 0);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(1378, 772);
+            this.tabControl1.TabIndex = 0;
             // 
-            // groupBox2
+            // tabPage1
             // 
-            this.groupBox2.Controls.Add(this.listView1);
-            this.groupBox2.Location = new System.Drawing.Point(814, 12);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(552, 748);
-            this.groupBox2.TabIndex = 0;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "groupBox2";
+            this.tabPage1.Location = new System.Drawing.Point(8, 46);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(1362, 718);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "tabPage1";
+            this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // listView1
+            // tabPage2
             // 
-            this.listView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.listView1.Location = new System.Drawing.Point(3, 35);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(546, 710);
-            this.listView1.TabIndex = 0;
-            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.tabPage2.Location = new System.Drawing.Point(8, 46);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(1362, 718);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "tabPage2";
+            this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // listView2
+            // tabPage3
             // 
-            this.listView2.Dock = System.Windows.Forms.DockStyle.Fill;
-            listViewItem1.Checked = true;
-            listViewItem1.StateImageIndex = 1;
-            this.listView2.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem1,
-            listViewItem2});
-            this.listView2.Location = new System.Drawing.Point(3, 35);
-            this.listView2.Name = "listView2";
-            this.listView2.Size = new System.Drawing.Size(585, 710);
-            this.listView2.TabIndex = 0;
-            this.listView2.UseCompatibleStateImageBehavior = false;
-            this.listView2.SelectedIndexChanged += new System.EventHandler(this.ListView2_SelectedIndexChanged);
+            this.tabPage3.Location = new System.Drawing.Point(8, 46);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(1362, 718);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "tabPage3";
+            this.tabPage3.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 32F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1378, 772);
-            this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.tabControl1);
             this.Name = "Form1";
             this.Text = "Form1";
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox2.ResumeLayout(false);
+            this.tabControl1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private GroupBox groupBox1;
-        private GroupBox groupBox2;
-        private ListView listView2;
-        private ListView listView1;
+        private TabControl tabControl1;
+        private TabPage tabPage1;
+        private TabPage tabPage2;
+        private TabPage tabPage3;
     }
 }

@@ -43,5 +43,14 @@ namespace LogicEngine.AbstractBaseClass
             get => ((ItemTaste)this.taste).ToString();
             set => this.taste = (ItemTaste)Enum.Parse(typeof(ItemTaste), value, true);
         }
+
+        /// <summary>
+        /// Gets or sets the taste as enum.
+        /// </summary>
+        public ItemTaste EnumTaste
+        {
+            get => this.taste;
+            set => this.taste = value;
+        }
     }
 }

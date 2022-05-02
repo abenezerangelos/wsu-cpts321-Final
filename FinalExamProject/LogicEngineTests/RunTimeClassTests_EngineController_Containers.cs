@@ -9,7 +9,7 @@ using System.Collections;
 
 namespace LogicEngineTests
 {
-    public class RunTimeClassTests_EngineController
+    public class RunTimeClassTests_EngineController_Containers
     {
         [SetUp]
         public void Setup()

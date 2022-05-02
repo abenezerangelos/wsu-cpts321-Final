@@ -74,5 +74,50 @@ namespace LogicEngine.AbstractBaseClass
             get => ((ItemState)this.state).ToString();
             set => this.state = (ItemState)Enum.Parse(typeof(ItemState), value, true);
         }
+
+        /// <summary>
+        /// Gets or sets the color as enum.
+        /// </summary>
+        public ItemColor EnumColor
+        {
+            get => this.color;
+            set => this.color = value;
+        }
+
+        /// <summary>
+        /// Gets or sets the shape as enum.
+        /// </summary>
+        public ItemShape EnumShape
+        {
+            get => this.shape;
+            set => this.shape = value;
+        }
+
+        /// <summary>
+        /// Gets or sets the texture as enum.
+        /// </summary>
+        public ItemTexture EnumTexture
+        {
+            get => this.texture;
+            set => this.texture = value;
+        }
+
+        /// <summary>
+        /// Gets or sets the size as enum.
+        /// </summary>
+        public ItemSize EnumSize
+        {
+            get => this.size;
+            set => this.size = value;
+        }
+
+        /// <summary>
+        /// Gets or sets the state as enum.
+        /// </summary>
+        public ItemState EnumState
+        {
+            get => this.state;
+            set => this.state = value;
+        }
     }
 }
