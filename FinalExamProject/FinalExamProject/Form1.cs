@@ -11,7 +11,7 @@ namespace FinalExamProject
     /// </summary>
     public partial class Form1 : Form
     {
-        EngineController application;
+        private EngineController application;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="Form1"/> class.
@@ -31,14 +31,12 @@ namespace FinalExamProject
         {
         }
 
-        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        private void ListBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void Button1_Click(object sender, EventArgs e)
         {
-
         }
     }
 }

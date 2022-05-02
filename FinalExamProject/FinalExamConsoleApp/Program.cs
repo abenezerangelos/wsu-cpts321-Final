@@ -10,7 +10,7 @@ Console.WriteLine("Hello, Venera!");
 var application = new EngineController();
 
 application.CreateFoodItem("Veggie");
-Veggie veggie1 = (Veggie)application.ItemContainer[0];
+Veggie veggie1 = (Veggie)application.ItemContainer[0]!;
 veggie1.Name = "Lettuce";
 veggie1.EnumColor = ItemColor.GREEN;
 veggie1.EnumShape = ItemShape.SQUARE;
@@ -19,7 +19,7 @@ veggie1.EnumTexture = ItemTexture.CRUNCHY;
 veggie1.EnumSize = ItemSize.MEDIUM;
 
 application.CreateFoodItem("Fruit");
-Fruit fruit1 = (Fruit)application.ItemContainer[1];
+Fruit fruit1 = (Fruit)application.ItemContainer[1]!;
 fruit1.Name = "Banana";
 fruit1.EnumColor = ItemColor.YELLOW;
 fruit1.EnumShape = ItemShape.SQUARE;

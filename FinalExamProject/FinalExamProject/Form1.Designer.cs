@@ -104,7 +104,7 @@
             this.listBoxForItems.Name = "listBoxForItems";
             this.listBoxForItems.Size = new System.Drawing.Size(575, 484);
             this.listBoxForItems.TabIndex = 0;
-            this.listBoxForItems.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
+            this.listBoxForItems.SelectedIndexChanged += new System.EventHandler(this.ListBox1_SelectedIndexChanged);
             // 
             // listBoxForBaskets
             // 
@@ -123,7 +123,7 @@
             this.button1.TabIndex = 2;
             this.button1.Text = "CreateFoodItem";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.Click += new System.EventHandler(this.Button1_Click);
             // 
             // button2
             // 

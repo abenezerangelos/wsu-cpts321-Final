@@ -75,7 +75,7 @@ namespace LogicEngineTests
             appInstance.CreateBasket("Veggie");
             appInstance.CreateBasket("Fruit");
 
-            Basket<Veggie> veggieBasket = (Basket<Veggie>)appInstance.BasketContainer[0];
+            Basket<Veggie> veggieBasket = (Basket<Veggie>)appInstance.BasketContainer[0]!;
 
             veggieBasket.Add(new Veggie());
             veggieBasket.Add(new Veggie());
