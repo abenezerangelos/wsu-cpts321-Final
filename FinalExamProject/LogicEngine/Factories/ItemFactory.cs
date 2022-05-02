@@ -13,7 +13,7 @@ namespace LogicEngine.Factories
     using LogicEngine.RunTimeClass.FoodItems;
 
     /// <summary>
-    /// The generic factory class for creating new Item.
+    /// The factory class for creating new Items.
     /// </summary>
     internal static class ItemFactory
     {
