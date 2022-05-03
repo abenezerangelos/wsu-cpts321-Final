@@ -15,21 +15,14 @@ namespace LogicEngine.Factories
     /// <summary>
     /// Basket Factory. Containing factory methods for creating Type-specific Baskets.
     /// </summary>
-    /// <typeparam name="T">the generic type.</typeparam>
     internal static class BasketFactory
     {
         /// <summary>
-        /// Creates a new Basket of Veggie.
+        /// Creates a new Basket of generic type T.
         /// </summary>
-        /// <returns>the new Veggie Basket.</returns>
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("StyleCop.CSharp.DocumentationRules", "SA1611:Element parameters should be documented", Justification = "throw away parameter.")]
-        internal static Basket<Veggie> CreateBasket(Veggie obj) => new Basket<Veggie>();
-
-        /// <summary>
-        /// Creates a new Basket of Fruit.
-        /// </summary>
-        /// <returns>the new Fruit Basket.</returns>
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("StyleCop.CSharp.DocumentationRules", "SA1611:Element parameters should be documented", Justification = "throw away parameter.")]
-        internal static Basket<Fruit> CreateBasket(Fruit obj) => new Basket<Fruit>();
+        /// <typeparam name="T">a generic type.</typeparam>
+        /// <returns>A new basket of generic type T.</returns>
+        internal static Basket<T> CreateBasket<T>()
+            where T : Food => new Basket<T>();
     }
 }
