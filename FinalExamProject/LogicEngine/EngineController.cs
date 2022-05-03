@@ -81,11 +81,11 @@ namespace LogicEngine
             switch (typeName)
             {
                 case "Veggie":
-                    this.BasketContainer.Add(BasketFactory.CreateBasket(new Veggie()));
+                    this.BasketContainer.Add(BasketFactory.CreateBasket<Veggie>());
                     break;
 
                 case "Fruit":
-                    this.BasketContainer.Add(BasketFactory.CreateBasket(new Fruit()));
+                    this.BasketContainer.Add(BasketFactory.CreateBasket<Fruit>());
                     break;
 
                 default:
